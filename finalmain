@@ -1,0 +1,43 @@
+#include <iostream>
+#include <string>
+//Final project C++
+//Abrahim Alani, Joey Mei, Jonathan Joly 
+
+//Abrahim's code:
+
+struct iPhone {
+    std::string model;
+    std::string features;
+    std::string price;
+};
+
+void displayWelcomeMessage() {
+    std::cout << "Welcome to the C++ Phone Store" << std::endl;
+}
+
+void displayPhoneList(const iPhone phones[], int numPhones) {
+    for (int i = 0; i < numPhones; ++i) {
+        std::cout << "Model: " << phones[i].model << std::endl;
+        std::cout << "Features: " << phones[i].features << std::endl;
+        std::cout << "ONLY FOR " << phones[i].price << "!!" << std::endl;
+        std::cout << "-----------------------------" << std::endl;
+    }
+}
+
+int main() {
+    const int numPhones = 4;
+
+    iPhone phoneList[numPhones] = {
+        {"iPhone 11 Series", "A13 Bionic chip, Dual and Triple-camera systems, Night mode, 4K video recording, iOS 13", "$699"},
+        {"iPhone SE (2nd generation)", "A13 Bionic chip, single-camera system, Touch ID, compact design", "$399"},
+        {"iPhone 12 Series", "5G capability, A14 Bionic chip, Ceramic Shield front cover, MagSafe technology, iOS 14", "$799"},
+        {"iPhone 13 Series", "A15 Bionic chip, improved battery life, smaller notch, advanced camera system, ProMotion display with 120Hz refresh rate", "$999"}
+    };
+
+    displayWelcomeMessage();
+    displayPhoneList(phoneList, numPhones);
+
+    return 0;
+}
+//End of Abrahim's code
+
